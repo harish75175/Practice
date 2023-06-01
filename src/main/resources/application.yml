@@ -1,0 +1,23 @@
+server:
+  port: 8050
+  
+ 
+spring:
+   datasource:
+      url: jdbc:mysql://zenstockdb.cycjxiz63uxm.ap-northeast-1.rds.amazonaws.com:3306/zenstockdb
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root1234
+   websocket:
+    servlet:
+      path: /ws
+    allowed-origins: "*"  
+    enabled: true
+ 
+   jpa:
+      hibernate.ddl-auto: update
+      show-sql: true
+      properties:
+         hibernate:
+            format_sql: true
+            dialect: org.hibernate.dialect.MySQL8Dialect
